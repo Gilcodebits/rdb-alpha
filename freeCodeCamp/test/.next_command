@@ -171,3 +171,4 @@ tree client/assets/fonts/
 find
 rm --hepl
 rm --help
+rm -r fonts
