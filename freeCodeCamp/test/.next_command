@@ -169,3 +169,5 @@ find client/assets/fonts/
 ls --color=auto client/assets/fonts/
 tree client/assets/fonts/
 find
+rm --hepl
+rm --help
