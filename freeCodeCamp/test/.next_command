@@ -195,3 +195,6 @@ cd ..
 ls --color=auto
 mv website website-boilerplate
 ls --color=auto
+cp -r website-boilerplate website
+cp website-boilerplate website
+cp --help
