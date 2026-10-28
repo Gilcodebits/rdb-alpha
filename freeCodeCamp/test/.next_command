@@ -205,3 +205,5 @@ find website-boilerplate
 clear
 echo goodbaye terminal
 echo goodbye terminal
+q
+exit
