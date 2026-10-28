@@ -41,3 +41,4 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 cd website
 ls --color=auto -a
 cd .
+touch background.jpg
