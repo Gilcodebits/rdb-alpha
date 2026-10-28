@@ -198,3 +198,4 @@ ls --color=auto
 cp -r website-boilerplate website
 cp website-boilerplate website
 cp --help
+cp -r website-boilerplate toms-website
