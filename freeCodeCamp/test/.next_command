@@ -142,3 +142,4 @@ tree
 find
 rmdir images
 rm images/background.jpg
+rmdir images
