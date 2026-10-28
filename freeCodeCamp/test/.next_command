@@ -141,3 +141,4 @@ sudo apt-get install tree -y
 tree
 find
 rmdir images
+rm images/background.jpg
