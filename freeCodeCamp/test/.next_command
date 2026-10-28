@@ -160,3 +160,6 @@ mkdir client/assets/fonts
 touch client/assets/fonts/roboto-bold.woff
 touch client/assets/fonts/roboto-lignt.woff
 touch client/assets/fonts/roboto-light.woff
+ls --color=auto client/assets/fonts/
+tree client/assets/fonts/
+find client/assets/fonts/
