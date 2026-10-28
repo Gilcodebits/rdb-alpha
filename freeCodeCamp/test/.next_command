@@ -140,3 +140,4 @@ tree
 sudo apt-get install tree -y
 tree
 find
+rmdir images
