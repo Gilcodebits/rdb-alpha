@@ -151,3 +151,5 @@ mv codeAlly.svg client/assets/icons
 mv CodeAlly.svg client/assets/icons
 tree
 find
+mv CodeRoade.svg client/assets/icons
+mv CodeRoad.svg client/assets/icons
