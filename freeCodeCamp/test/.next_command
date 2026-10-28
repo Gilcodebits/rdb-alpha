@@ -147,3 +147,5 @@ find
 ls --color=auto
 mkdir /client/assets/icons
 mkdir client/assets/icons
+mv codeAlly.svg client/assets/icons
+mv CodeAlly.svg client/assets/icons
