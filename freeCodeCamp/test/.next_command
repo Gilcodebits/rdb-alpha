@@ -81,3 +81,4 @@ ls --color=auto images
 pwd
 rm header.png
 rm footer.jpeg
+ls --color=auto
