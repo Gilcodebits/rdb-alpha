@@ -269,87 +269,77 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-COPY public.galaxy (galaxy_id, name, description, distance_from_earth, has_life, galaxy_type_id) FROM stdin;
-1	Voie Lactee	Notre galaxie	0	t	1
-2	Andromede	Galaxie voisine	2537000	t	1
-3	Galaxie du Triangle	Petite galaxie spirale	2730000	f	1
-4	Sombrero	Galaxie en forme de chapeau	29000000	f	1
-5	Tourbillon	Galaxie spirale	23000000	f	1
-6	Centaure A	Galaxie elliptique	12000000	f	2
-\.
+INSERT INTO public.galaxy VALUES (1, 'Voie Lactee', 'Notre galaxie', 0, true, 1);
+INSERT INTO public.galaxy VALUES (2, 'Andromede', 'Galaxie voisine', 2537000, true, 1);
+INSERT INTO public.galaxy VALUES (3, 'Galaxie du Triangle', 'Petite galaxie spirale', 2730000, false, 1);
+INSERT INTO public.galaxy VALUES (4, 'Sombrero', 'Galaxie en forme de chapeau', 29000000, false, 1);
+INSERT INTO public.galaxy VALUES (5, 'Tourbillon', 'Galaxie spirale', 23000000, false, 1);
+INSERT INTO public.galaxy VALUES (6, 'Centaure A', 'Galaxie elliptique', 12000000, false, 2);
 
 
 --
 -- Data for Name: galaxy_type; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-COPY public.galaxy_type (galaxy_type_id, name, description) FROM stdin;
-1	Spirale	Galaxie en forme de spirale
-2	Elliptique	Galaxie en forme ovale
-3	Irreguliere	Galaxie sans forme precise
-\.
+INSERT INTO public.galaxy_type VALUES (1, 'Spirale', 'Galaxie en forme de spirale');
+INSERT INTO public.galaxy_type VALUES (2, 'Elliptique', 'Galaxie en forme ovale');
+INSERT INTO public.galaxy_type VALUES (3, 'Irreguliere', 'Galaxie sans forme precise');
 
 
 --
 -- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-COPY public.moon (moon_id, name, description, diameter_km, has_atmosphere, planet_id) FROM stdin;
-1	Lune	Lune de la Terre	3474	f	1
-2	Phobos	Lune de Mars	22	f	2
-3	Deimos	Deuxieme lune de Mars	12	f	2
-4	Io	Lune de Jupiter	3643	f	6
-5	Europe	Lune de Jupiter	3121	f	6
-6	Ganymede	Plus grande lune	5268	f	6
-7	Callisto	Lune de Jupiter	4820	f	6
-8	Titan	Lune de Saturne	5150	t	7
-9	Encelade	Lune de Saturne	504	f	7
-10	Rhea	Lune de Saturne	1527	f	7
-11	Titania	Lune d Uranus	1577	f	8
-12	Oberon	Lune d Uranus	1522	f	8
-13	Triton	Lune de Neptune	2706	f	9
-14	Nereide	Lune de Neptune	340	f	9
-15	Charon	Lune de Pluton	1212	f	9
-16	Mimas	Lune de Saturne	396	f	7
-17	Tethys	Lune de Saturne	1062	f	7
-18	Dione	Lune de Saturne	1122	f	7
-19	Ariel	Lune d Uranus	1157	f	8
-20	Umbriel	Lune d Uranus	1169	f	8
-\.
+INSERT INTO public.moon VALUES (1, 'Lune', 'Lune de la Terre', 3474, false, 1);
+INSERT INTO public.moon VALUES (2, 'Phobos', 'Lune de Mars', 22, false, 2);
+INSERT INTO public.moon VALUES (3, 'Deimos', 'Deuxieme lune de Mars', 12, false, 2);
+INSERT INTO public.moon VALUES (4, 'Io', 'Lune de Jupiter', 3643, false, 6);
+INSERT INTO public.moon VALUES (5, 'Europe', 'Lune de Jupiter', 3121, false, 6);
+INSERT INTO public.moon VALUES (6, 'Ganymede', 'Plus grande lune', 5268, false, 6);
+INSERT INTO public.moon VALUES (7, 'Callisto', 'Lune de Jupiter', 4820, false, 6);
+INSERT INTO public.moon VALUES (8, 'Titan', 'Lune de Saturne', 5150, true, 7);
+INSERT INTO public.moon VALUES (9, 'Encelade', 'Lune de Saturne', 504, false, 7);
+INSERT INTO public.moon VALUES (10, 'Rhea', 'Lune de Saturne', 1527, false, 7);
+INSERT INTO public.moon VALUES (11, 'Titania', 'Lune d Uranus', 1577, false, 8);
+INSERT INTO public.moon VALUES (12, 'Oberon', 'Lune d Uranus', 1522, false, 8);
+INSERT INTO public.moon VALUES (13, 'Triton', 'Lune de Neptune', 2706, false, 9);
+INSERT INTO public.moon VALUES (14, 'Nereide', 'Lune de Neptune', 340, false, 9);
+INSERT INTO public.moon VALUES (15, 'Charon', 'Lune de Pluton', 1212, false, 9);
+INSERT INTO public.moon VALUES (16, 'Mimas', 'Lune de Saturne', 396, false, 7);
+INSERT INTO public.moon VALUES (17, 'Tethys', 'Lune de Saturne', 1062, false, 7);
+INSERT INTO public.moon VALUES (18, 'Dione', 'Lune de Saturne', 1122, false, 7);
+INSERT INTO public.moon VALUES (19, 'Ariel', 'Lune d Uranus', 1157, false, 8);
+INSERT INTO public.moon VALUES (20, 'Umbriel', 'Lune d Uranus', 1169, false, 8);
 
 
 --
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-COPY public.planet (planet_id, name, description, distance_from_star, has_life, star_id) FROM stdin;
-1	Terre	Notre planete	150	t	1
-2	Mars	Planete rouge	228	f	1
-3	Proxima b	Exoplanete proche	7	f	2
-4	Mercure	Petite planete	58	f	1
-5	Venus	Planete chaude	108	f	1
-6	Jupiter	Plus grande planete	778	f	1
-7	Saturne	Planete avec anneaux	1427	f	1
-8	Uranus	Planete glacee	2871	f	1
-9	Neptune	Planete lointaine	4498	f	1
-10	Kepler 16b	Exoplanete	245	f	2
-11	Trappist 1e	Exoplanete	39	f	3
-12	Gliese 667 Cc	Exoplanete	23	f	4
-\.
+INSERT INTO public.planet VALUES (1, 'Terre', 'Notre planete', 150, true, 1);
+INSERT INTO public.planet VALUES (2, 'Mars', 'Planete rouge', 228, false, 1);
+INSERT INTO public.planet VALUES (3, 'Proxima b', 'Exoplanete proche', 7, false, 2);
+INSERT INTO public.planet VALUES (4, 'Mercure', 'Petite planete', 58, false, 1);
+INSERT INTO public.planet VALUES (5, 'Venus', 'Planete chaude', 108, false, 1);
+INSERT INTO public.planet VALUES (6, 'Jupiter', 'Plus grande planete', 778, false, 1);
+INSERT INTO public.planet VALUES (7, 'Saturne', 'Planete avec anneaux', 1427, false, 1);
+INSERT INTO public.planet VALUES (8, 'Uranus', 'Planete glacee', 2871, false, 1);
+INSERT INTO public.planet VALUES (9, 'Neptune', 'Planete lointaine', 4498, false, 1);
+INSERT INTO public.planet VALUES (10, 'Kepler 16b', 'Exoplanete', 245, false, 2);
+INSERT INTO public.planet VALUES (11, 'Trappist 1e', 'Exoplanete', 39, false, 3);
+INSERT INTO public.planet VALUES (12, 'Gliese 667 Cc', 'Exoplanete', 23, false, 4);
 
 
 --
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-COPY public.star (star_id, name, description, age_in_millions_of_years, is_spherical, galaxy_id) FROM stdin;
-1	Soleil	Etoile de notre systeme solaire	4600	t	1
-2	Proxima Centauri	Etoile la plus proche du Soleil	4800	t	1
-3	Betelgeuse	Etoile geante rouge	10	t	2
-4	Sirius	Etoile tres brillante	240	t	1
-5	Alpha Centauri	Systeme triple	5300	t	1
-6	Vega	Etoile bleue	455	t	2
-\.
+INSERT INTO public.star VALUES (1, 'Soleil', 'Etoile de notre systeme solaire', 4600, true, 1);
+INSERT INTO public.star VALUES (2, 'Proxima Centauri', 'Etoile la plus proche du Soleil', 4800, true, 1);
+INSERT INTO public.star VALUES (3, 'Betelgeuse', 'Etoile geante rouge', 10, true, 2);
+INSERT INTO public.star VALUES (4, 'Sirius', 'Etoile tres brillante', 240, true, 1);
+INSERT INTO public.star VALUES (5, 'Alpha Centauri', 'Systeme triple', 5300, true, 1);
+INSERT INTO public.star VALUES (6, 'Vega', 'Etoile bleue', 455, true, 2);
 
 
 --
